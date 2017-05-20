@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GoEventsProject.Views.PageConnexion">
+
+    <StackLayout VerticalOptions="Center" Padding="20" >
+
+
+        <Entry  Placeholder="Identifiant" HeightRequest="50" TextColor="Black" />
+
+        <Entry  Placeholder="Mot de passe" IsPassword="true" HeightRequest="50" TextColor="Black" />
+
+        <Button Text="Connexion" BorderRadius="5" Clicked="EnClicConnexion" />
+
+    </StackLayout>
+    
+</ContentPage>

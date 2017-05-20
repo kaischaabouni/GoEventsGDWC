@@ -13,7 +13,10 @@ namespace GoEventsProject
         {
             InitializeComponent();
 
-            MainPage = new GoEventsProject.MainPage();
+
+            // Ouvrir la page d'Accueil
+            NavigationPage navigationAppli = new NavigationPage(new GoEventsProject.Views.PageConnexion());
+            MainPage = navigationAppli;
         }
 
         protected override void OnStart()
