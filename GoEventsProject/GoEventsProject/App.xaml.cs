@@ -1,5 +1,7 @@
-﻿using System;
+﻿using GoEventsProject.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
@@ -9,6 +11,8 @@ namespace GoEventsProject
 {
     public partial class App : Application
     {
+        //public static ObservableCollection<Evenement> Logements { get; set; }
+
         public App()
         {
             InitializeComponent();
