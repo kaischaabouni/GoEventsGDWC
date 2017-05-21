@@ -17,10 +17,17 @@ namespace GoEventsProject
         {
             InitializeComponent();
 
+            NavigationPage.SetHasNavigationBar(this, false);
 
             // Ouvrir la page d'Accueil
             NavigationPage navigationAppli = new NavigationPage(new GoEventsProject.Views.PageConnexion());
+            
             MainPage = navigationAppli;
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
 
         protected override void OnStart()
