@@ -8,8 +8,13 @@ namespace GoEventsProject.Models
 {
     class Evenement
     {
+        public int IdEvenement { get; set; }
+
         public string Titre { get; set; }
 
         public string Description { get; set; }
+
+        public string UrlImage { get; set; }
+
     }
 }

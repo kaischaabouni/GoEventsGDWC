@@ -5,10 +5,22 @@
              x:Class="GoEventsProject.Views.PageListeEvenements"
              Title="Evènements" >
 
-    <ListView x:Name="EmployeeView">
+    <ListView x:Name="EvenementsView" ItemSelected="enEvenementSelectionne">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding DisplayName}" />
+                <ViewCell>
+                    <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding UrlImage}" />
+                            <Label Text="{Binding Titre}"
+                                TextColor="#f35e20" />
+                            <Label Text="{Binding Description}"
+                                HorizontalOptions="EndAndExpand"
+                                TextColor="#503026" />
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
