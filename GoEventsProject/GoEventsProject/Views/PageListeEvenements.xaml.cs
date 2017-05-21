@@ -14,21 +14,33 @@ namespace GoEventsProject.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageListeEvenements : ContentPage
     {
-        ObservableCollection<Employee> employees = new ObservableCollection<Employee>();
+        ObservableCollection<Evenement> evenements = new ObservableCollection<Evenement>();
 
         public PageListeEvenements()
         {
             InitializeComponent();
 
-            EmployeeView.ItemsSource = employees;
+            EvenementsView.ItemsSource = evenements;
 
             // Remplissage à la main
-            employees.Add(new Employee { DisplayName = "Rob Finnerty" });
-            employees.Add(new Employee { DisplayName = "Bill Wrestler" });
-            employees.Add(new Employee { DisplayName = "Dr. Geri-Beth Hooper" });
-            employees.Add(new Employee { DisplayName = "Dr. Keith Joyce-Purdy" });
-            employees.Add(new Employee { DisplayName = "Sheri Spruce" });
-            employees.Add(new Employee { DisplayName = "Burt Indybrick" });
+            evenements.Add(new Evenement { IdEvenement = 1, Titre = "Rob Finnerty", Description = "Finnerty", UrlImage = "iconfootball.png" });
+            evenements.Add(new Evenement { IdEvenement = 2, Titre = "Rob Finnerty", Description = "Finnerty", UrlImage = "basketicon.png" });
+            evenements.Add(new Evenement { IdEvenement = 3, Titre = "Rob Finnerty", Description = "Finnerty", UrlImage = "cardicon.png" });
+            evenements.Add(new Evenement { IdEvenement = 4, Titre = "Rob Finnerty", Description = "Finnerty", UrlImage = "muscic_icon.png" });
+            evenements.Add(new Evenement { IdEvenement = 5, Titre = "Rob Finnerty", Description = "Finnerty", UrlImage = "basketicon.png" });
+            evenements.Add(new Evenement { IdEvenement = 6, Titre = "Rob Finnerty", Description = "Finnerty", UrlImage = "iconfootball.png" });
+            evenements.Add(new Evenement { IdEvenement = 7, Titre = "Rob Finnerty", Description = "Finnerty", UrlImage = "jeux_video_icon.png" });
+
+        }
+
+        void enEvenementSelectionne(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+            {
+                return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
+            }
+            DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
+            //((ListView)sender).SelectedItem = null; //uncomment line if you want to disable the visual selection state.
         }
     }
 }
