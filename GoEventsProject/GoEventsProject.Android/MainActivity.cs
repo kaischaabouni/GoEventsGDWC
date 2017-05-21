@@ -21,6 +21,7 @@ namespace GoEventsProject.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+            Window.SetStatusBarColor(Android.Graphics.Color.Rgb(32, 36, 62));
         }
     }
 }
