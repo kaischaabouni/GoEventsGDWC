@@ -19,6 +19,7 @@ namespace GoEventsProject.Views
         public PageConnexion()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         async Task EnClicConnexion(object sender, EventArgs args)
