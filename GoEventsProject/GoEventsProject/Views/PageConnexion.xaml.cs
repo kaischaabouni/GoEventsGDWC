@@ -69,9 +69,6 @@ namespace GoEventsProject.Views
                 //System.Diagnostics.Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
 
-
-
-
         }
     }
 }
